@@ -21,22 +21,34 @@ body {
 .nav {
     max-width: 1300px;
     display: flex;
-    margin: 0 8%;
+    margin: 0 auto;
     align-items: center;
 }
 .nav-logo {
     width: 120px;
-}
-.nav-links {
-    text-decoration: none;
-    color: black;
 }
 .nav-items {
     list-style: none;
     display: flex;
     align-items: center;
     margin-left: auto;
-    gap: 26px;
+    gap: 30px;
+}
+
+.nav-links {
+    display: inline-block;
+    width: 125%;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    border-radius: 15px;
+    background-image: linear-gradient(to right, transparent 50%, #7D7D7D 50%);
+    background-size: 200%;
+    transition: 0.3s ease-in-out;
+}
+.nav-links:hover {
+    background-position: -100%;
+    color: #FFFEF4;
 }
 .nav-links-linkedin img{
     height: 34px;
@@ -81,11 +93,11 @@ body {
     font-family: 'Agrandir Grand-Light', Helvetica, sans-serif;
 }
 .wordContainer {
-    position: relative;
+    display: flex;
+    justify-content: center;
 }
 .wordContainer-text {
-    position: absolute;
-    left: 125px;
+    max-width: 1000px;
     font-size: 20px;
 }
 
@@ -95,7 +107,7 @@ body {
 /* -------------- */
 .skills {
     max-width: 1300px;
-    margin: 32px 8%;
+    margin: 32px auto;
 }
 .skills-content {
     max-width: 1300px;
@@ -119,7 +131,7 @@ body {
 /* ---------------- */
 .projects {
     max-width: 1300px;
-    margin: 64px 8%;
+    margin: 64px auto;
 }
 .projectCard {
     max-width: 1300px;
@@ -154,7 +166,6 @@ body {
     text-decoration: none;
     color: #FFFEF4;
     background-color: #61609A;
-    
 }
 
 #project2 .projectCard-body {
@@ -165,7 +176,6 @@ body {
     margin-right: 0;
     margin-left: 32px;
 }
-
 
 /* ------------------ */
 /*       FOOTER       */
@@ -224,7 +234,7 @@ body {
     text-decoration: none;
     margin: 8px auto;
 
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 .footer-container-rightContent .button:hover {
     background-color: #3F3F3F;
@@ -244,7 +254,7 @@ body {
     position: fixed;
     right: 25px;
     bottom: 25px;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 .floating-btn:hover {
     padding: 18px;
@@ -259,10 +269,43 @@ body {
     color: #FFFEF4;
     background-color: #636363;
     border-radius: 50%;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 .socials-icon:hover {
     background-color: #3F3F3F;
+}
+
+
+/* ----------------- */
+/*     PRELOADER     */
+/* ----------------- */
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    background: #FFFEF4;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader img {
+    animation: grow 2s ease-in-out;
+    height: 100px;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(5px);
+    }
+    50% {
+        transform: scale(10px);
+    }
+    100% {
+        transform: scale(15px);
+    }
 }
 
 
